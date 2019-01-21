@@ -1,0 +1,6 @@
+<% @expenses.each do |expense| %>
+  <div>
+    <h2><a href="/<%= expense.id %>"><%= expense.activity %></a></h2>
+    <p><%= expense.description %></p>
+  </div>
+<% end %>
