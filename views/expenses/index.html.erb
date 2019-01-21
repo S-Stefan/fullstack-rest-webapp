@@ -1,6 +1,14 @@
-<% @expenses.each do |expense| %>
-  <div>
-    <h2><a href="/<%= expense.id %>"><%= expense.activity %></a></h2>
-    <p><%= expense.description %></p>
-  </div>
-<% end %>
+<table class="table table-hover table-bordered">
+  <tr>
+    <th>Activity</th>
+    <th>Cost</th>
+    <th>Date</th>
+  </tr>
+  <% @expenses.each do |expense| %>
+    <tr>
+      <td><a href="/<%= expense.id %>"><%= expense.activity %></a></td>
+      <td>£<%= expense.cost %></td>
+      <td><%= expense.date %></td>
+    </tr>
+  <% end %>
+</table>
