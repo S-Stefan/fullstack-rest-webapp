@@ -1,30 +1,30 @@
 <form action="/<%= @expense.id %>" method="POST">
 
-  <div>
+  <div class="form-group">
     <label>Activity</label>
-    <input type="text" name="activity" placeholder="Please enter an activity" value=<%= @expense.activity%>>
+    <input class="form-control" type="text" name="activity" placeholder="Please enter an activity" value=<%= @expense.activity%>>
   </div>
 
-  <div>
+  <div class="form-group">
     <label>Description</label>
-    <textarea name="description" placeholder="Describe the activity"><%= @expense.description%></textarea>
+    <textarea class="form-control" name="description" placeholder="Describe the activity"><%= @expense.description%></textarea>
   </div>
 
-  <div>
+  <div class="form-group">
     <label>Cost</label>
-    <textarea name="cost" placeholder="Activity cost"><%= @expense.cost%></textarea>
+    <textarea class="form-control" name="cost" placeholder="Activity cost"><%= @expense.cost%></textarea>
   </div>
 
-  <div>
+  <div class="form-group">
     <label>Date</label>
-    <textarea name="date" placeholder="Activity date"><%= @expense.date%></textarea>
+    <textarea class="form-control" name="date" placeholder="Activity date"><%= @expense.date%></textarea>
   </div>
 
   <% if @expense.id %>
     <input type="hidden" name="_method" value="PUT">
   <% end %>
   <div>
-    <input type="submit" value="Save Activity">
+    <input class="btn btn-default" type="submit" value="Save Activity">
   </div>
 
 </form>

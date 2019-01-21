@@ -1,7 +1,9 @@
-<h1><%= @expense.activity %></h1>
-<p><%= @expense.description %></p>
+<div class="center">
+  <h1><%= @expense.activity %> - £<%= @expense.cost %></h1>
+  <p><%= @expense.description %></p>
 
-<form class="" action="/<%= @expense.id%>" method="post">
-  <input type="hidden" name="_method" value="DELETE">
-  <input type="submit" value="Delete Expense">
-</form>
+  <form class="" action="/<%= @expense.id%>" method="post">
+    <input class="btn btn-default" type="hidden" name="_method" value="DELETE">
+    <input class="btn btn-default" type="submit" value="Delete Expense">
+  </form>
+</div>
